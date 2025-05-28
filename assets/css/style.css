@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    all: unset;
+}
+a:hover{
+    text-decoration: underline;
+}
+.menu{
+    margin: 0;
+    padding: 30px;
+}
+.grid-layout{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 10% 5% 75% 10%;
+    grid-template-areas:
+    "menu"
+    "banner"
+    "principal"
+    "footer"
+    ;
+}
+.menu{
+    grid-area: menu;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0e0d1b;
+    color: white;
+}
+.menu img{
+    width: 90px; /*REVISAR*/
+}
+.menu-links{
+    padding: 10px;
+}
+.banner{
+    grid-area: banner;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    background-color: #0e0d1b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loop 6s infinite
+}
+@keyframes loop{
+    33%{
+        background-color: #d9364d;
+    }
+    66%{
+        background-color: #38aecf;
+    }
+    100%{
+        background-color: #0e0d1b;
+    }
+}
+
+.principal{
+    grid-area: principal;
+    background-color: #0e0d1b;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+    overflow-y: auto;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    overflow: auto;
+}
+.juegos{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #38aecf;
+    color: black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+.juegos img{
+    width: 100%;
+}
+.actual img{
+    transition: all 0.5s ease;
+}
+.actual img:hover{
+    scale: 1.4;
+}
+.played{
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+.played:hover{
+    filter: grayscale(0%);
+}
+.next{
+    transform: rotateY(180deg);
+    filter: blur(4px);
+    transition: all 0.5s ease;
+}
+.next:hover{
+    transform: rotateY(0deg);
+    filter: blur(0);
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #d9364d;
+    color: white;
+}
