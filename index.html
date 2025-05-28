@@ -11,10 +11,21 @@
     <div class="grid-layout">
         <nav class="menu">
             <img src="./assets/imgs/logo.jpg" alt="Logotipo JuegaConJE">
-            <div class="menu-links">
+            <div class="menu-links-mobile">
                 <i class="fa-regular fa-gamepad"></i> <a href="#ahora">Jugando ahora</a> / 
                 <i class="fa-solid fa-clock-rotate-left"></i> <a href="#jugados">Jugados</a> / 
                 <i class="fa-regular fa-calendar-days"></i> <a href="#proximamente">Próximamente</a>
+            </div>
+            <div class="menu-links-desktop"><br><br>
+                <div>
+                    <i class="fa-regular fa-gamepad"></i> <a href="#ahora">Jugando ahora</a><br><br>
+                </div>
+                <div>
+                    <i class="fa-solid fa-clock-rotate-left"></i> <a href="#jugados">Jugados</a><br><br>
+                </div>
+                <div>
+                    <i class="fa-regular fa-calendar-days"></i> <a href="#proximamente">Próximamente</a>
+                </div>
             </div>
         </nav>
         <section class="banner">
@@ -27,27 +38,30 @@
                 <h4>Campaña principal</h4>
             </div>
             <h3 id="jugados">Jugados</h3>
-            <div class="juegos played">
-                <img src="./assets/imgs/tinytina.jpg" alt="Portada de Tiny Tina">
-                <h4>Juego terminado</h4>
-            </div>
-            <div class="juegos played">
-                <img src="./assets/imgs/tsushima.jpg" alt="Portada de Ghost of Tsushima">
-                <h4>¡Platinado! <i style="color: gold;" class="fa-solid fa-trophy"></i></h4>
-            </div>
-            <div class="juegos played">
-                <img src="./assets/imgs/codmw2.jpg" alt="Portada de Call of Duty MW2">
-                <h4>Campaña dificultad "Veterano"</h4>
-            </div>
-            <div class="juegos played">
-                <img src="./assets/imgs/stanleyparable.jpg" alt="Portada de The Stanley Parable">
-                <h4>Juego terminado</h4>
-            </div>
-            <div class="juegos played">
-                <img src="./assets/imgs/littleacre.png" alt="Portada de The Little Acre">
-                <h4>Juego terminado</h4>
+            <div class="grid-container">
+                <div class="juegos played">
+                    <img src="./assets/imgs/tinytina.jpg" alt="Portada de Tiny Tina">
+                    <h4>Juego terminado</h4>
+                </div>
+                <div class="juegos played">
+                    <img src="./assets/imgs/tsushima.jpg" alt="Portada de Ghost of Tsushima">
+                    <h4>¡Platinado! <i style="color: gold;" class="fa-solid fa-trophy"></i></h4>
+                </div>
+                <div class="juegos played">
+                    <img src="./assets/imgs/codmw2.jpg" alt="Portada de Call of Duty MW2">
+                    <h4>Campaña dificultad "Veterano"</h4>
+                </div>
+                <div class="juegos played">
+                    <img src="./assets/imgs/stanleyparable.jpg" alt="Portada de The Stanley Parable">
+                    <h4>Juego terminado</h4>
+                </div>
+                <div class="juegos played">
+                    <img src="./assets/imgs/littleacre.png" alt="Portada de The Little Acre">
+                    <h4>Juego terminado</h4>
+                </div>
             </div>
         <h3 id="proximamente">Próximamente</h3>
+        <div class="grid-container">
             <div class="juegos next">
                 <img src="./assets/imgs/doom2.jpg" alt="Portada de Doom Eternal">
                 <h4>Campaña Principal</h4>
@@ -56,6 +70,7 @@
                 <img src="./assets/imgs/mgs1.png" alt="Portada de Metal Gear Solid">
                 <h4>¡Toda la saga Metal Gear!</h4>
             </div>
+        </div>
         </main>
         <footer class="footer">
             <div>

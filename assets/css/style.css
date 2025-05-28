@@ -10,12 +10,12 @@ a:hover{
 }
 .menu{
     margin: 0;
-    padding: 30px;
+    padding: 20px;
 }
 .grid-layout{
     display: grid;
     height: 100vh;
-    grid-template-rows: 10% 5% 75% 10%;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
     "menu"
     "banner"
@@ -32,10 +32,13 @@ a:hover{
     color: white;
 }
 .menu img{
-    width: 90px; /*REVISAR*/
+    width: 90px;
 }
-.menu-links{
+.menu-links-mobile{
     padding: 10px;
+}
+.menu-links-desktop{
+    display: none;
 }
 .banner{
     grid-area: banner;
@@ -69,12 +72,14 @@ a:hover{
     align-items: center;
     color: white;
     overflow-y: auto;
+    height: 100%;
 }
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
-    overflow: auto;
+    place-content: center;
 }
 .juegos{
     display: flex;
@@ -120,4 +125,40 @@ a:hover{
     padding: 15px;
     background-color: #d9364d;
     color: white;
+}
+@media (min-width:576px){
+    .grid-layout{
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:
+        "menu banner"
+        "menu principal"
+        "footer footer"
+        ;
+    }
+    .menu-links-mobile{
+        display: none;
+    }
+    .menu-links-desktop{
+        display: contents;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        min-width: 150px;
+        background-color: #0e0d1b;
+        color: white;
+    }
+}
+@media (min-width: 992px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
